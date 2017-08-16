@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: dalston-eureka-consumer-feign
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.ming.springcloud
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/dalston-eure
+ ka-consumer-feign/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
