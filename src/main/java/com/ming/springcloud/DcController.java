@@ -12,7 +12,8 @@ public class DcController {
 	DiscoveryClient discoveryClient;
 	
 	@GetMapping("/dc")
-	public String dc(){
+	public String dc() throws InterruptedException{
+		Thread.sleep(5000000000L);
 		String services = "services: " + discoveryClient.getServices();
 		System.out.println(services);
 		return services;
