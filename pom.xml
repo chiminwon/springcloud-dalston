@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ming.springcloud</groupId>
-	<artifactId>dalston-config-server</artifactId>
+	<artifactId>dalston-config-server-git</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dalston-config-server</name>
+	<name>dalston-config-server-git</name>
 	<description>Spring Cloud In Action</description>
 
 	<parent>
