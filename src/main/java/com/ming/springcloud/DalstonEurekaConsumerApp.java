@@ -16,7 +16,6 @@ public class DalstonEurekaConsumerApp {
 	}
 	
 	public static void main(String[] args) {
-
 		new SpringApplicationBuilder(DalstonEurekaConsumerApp.class).web(true).run(args);
 	}
 
