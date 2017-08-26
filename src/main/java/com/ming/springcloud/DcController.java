@@ -12,15 +12,16 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 public class DcController {
 
 	@Autowired
-	RestTemplate restTemplate;
+	ConsumerService consumerService;
 
 	@GetMapping("/consumer")
 	public String dc() {
-		return restTemplate.getForObject("http://dalston-eureka-client/dc", String.class);
+		return consumerService.consumer();
 	}
 
 	@Service
 	class ConsumerService {
+		
 		@Autowired
 		RestTemplate restTemplate;
 
@@ -30,7 +31,7 @@ public class DcController {
 		}
 
 		public String fallback() {
-			return "fallback";
+			return "服务正在调试,请等待...";
 		}
 	}
 
