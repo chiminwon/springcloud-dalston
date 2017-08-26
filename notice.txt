@@ -1,1 +1,1 @@
-visit url: http://localhost:1201/dalston-config-client/dev
+visit url: http://localhost:1201/dalston-config-client-git/dev
