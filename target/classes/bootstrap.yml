@@ -1,6 +1,6 @@
 spring:
   application:
-    name: dalston-config-client
+    name: dalston-config-client-git
   cloud:
     config:
       uri: http://localhost:1201/
@@ -8,4 +8,9 @@ spring:
       label: master
       
 server:
-  port: 2002
+  port: 1301
+  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone: http://localhost:1001/eureka/
