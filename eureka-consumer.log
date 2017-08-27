@@ -1,0 +1,73 @@
+2017-08-27 18:36:48.111  INFO 4536 --- [main] m.s.DalstonEurekaConsumerFeignHystrixApp : No active profile set, falling back to default profiles: default
+2017-08-27 18:36:48.149  INFO 4536 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32f232a5: startup date [Sun Aug 27 18:36:48 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@35cabb2a
+2017-08-27 18:36:48.988 ERROR 4536 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.NoClassDefFoundError: com/netflix/hystrix/contrib/javanica/aop/aspectj/HystrixCommandAspect
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_121]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_121]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_121]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613) ~[spring-core-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524) ~[spring-core-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510) ~[spring-core-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570) ~[spring-core-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$BeanPostProcessorsRegistrar.registerSyntheticBeanIfMissing(EmbeddedServletContainerAutoConfiguration.java:148) ~[spring-boot-autoconfigure-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$BeanPostProcessorsRegistrar.registerBeanDefinitions(EmbeddedServletContainerAutoConfiguration.java:137) ~[spring-boot-autoconfigure-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:354) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:143) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:116) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:320) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.ming.springcloud.DalstonEurekaConsumerFeignHystrixApp.main(DalstonEurekaConsumerFeignHystrixApp.java:12) [classes/:na]
+Caused by: java.lang.ClassNotFoundException: com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_121]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_121]
+	... 30 common frames omitted
+
+2017-08-27 18:36:49.022  INFO 4536 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32f232a5: startup date [Sun Aug 27 18:36:48 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@35cabb2a
+2017-08-27 18:36:49.026  WARN 4536 --- [main] ationConfigEmbeddedWebApplicationContext : Exception thrown from LifecycleProcessor on context close
+
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32f232a5: startup date [Sun Aug 27 18:36:48 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@35cabb2a
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:427) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:999) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:750) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.ming.springcloud.DalstonEurekaConsumerFeignHystrixApp.main(DalstonEurekaConsumerFeignHystrixApp.java:12) [classes/:na]
+
+2017-08-27 18:36:49.026 ERROR 4536 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32f232a5: startup date [Sun Aug 27 18:36:48 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@35cabb2a
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:750) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.ming.springcloud.DalstonEurekaConsumerFeignHystrixApp.main(DalstonEurekaConsumerFeignHystrixApp.java:12) [classes/:na]
+
